@@ -1,0 +1,12 @@
+<?php
+echo "<br>";
+  include "config.php";
+
+  $sql2="SELECT * FROM afeedback  WHERE UID= '{$row['UID']}' ";
+  $result2=mysqli_query($conn,$sql2) or die("Query Failed");
+  if(mysqli_num_rows($result2)>0){
+     while($row=mysqli_fetch_assoc($result2)) {
+echo $row['message'];
+}
+}
+ ?>
